@@ -10,15 +10,193 @@
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div class="container text-center">
           <h1> Lets Answer A Few Questions To Find Your Soul Mate</h1>
           <br> <br>
 
           <h2> The Last First Questions You'll Answer</h2>
 
+        <hr>
+          <h3><strong> Lets Find Out About You</strong></h3>
+          <h4> Name: </h4>
+          <input type= "text" name = "" id= "name" class="form" required/>
+          <h4>Photo Link Here</h4>
+          <input type= "url" name = "" id= "photo" class="form" required/>
+        </hr>
+        <br>
+        <h3><strong>Question 1</strong></h3>
+      <h4>Are you will to share your most recent text messages?</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 2</strong></h3>
+      <h4>I consider myself to be adventerous</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 3</strong></h3>
+      <h4>Do you think there is life on other planets?</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 4</strong></h3>
+      <h4>How important is trust in a relationship?</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 5</strong></h3>
+      <h4>Do you believe everyone deserves a second chance?</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 6</strong></h3>
+      <h4>Do you believe that a truth that brings a tear is better than a lie that brings a smile.</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 7</strong></h3>
+      <h4>Money is important to me...  </h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 8</strong></h3>
+      <h4>I finish what I start ... </h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 9</strong></h3>
+      <h4>People around other people gives me more energy...</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <h3><strong>Question 10</strong></h3>
+      <h4>I can think quick in different situations...</h4>
+      <select data-placeholder="" class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <br>
 
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                     <h4 class="modal-title">My Perfect Match !</h4>
+                </div>
 
+                <div class="modal-body">
+                <h2 id="nameOfMatch"></h2>
+                <img id="matchImg" src="PLACEHOLDER" alt="PLACEHOLDER IMAGES" />    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $("#submit").on("click", function() {
+          function completedForm() {
+            var isValid = true;
+            $(".form-control").each(function() {
+              if ($(this).val() === "") isComplete = false;
+            });
+            $(".chosen-select").each(function() {
+              if ($(this).val() === "") isComplete = false;
+            });
+            return isValid;
+          }
+          if (validateForm() == true) {
+            var userData = {
+              name: $("#name").val(),
+              photo: $("#photo").val(),
+              scores: [
+                $("#question1").val(),
+                $("#question2").val(),
+                $("#question3").val(),
+                $("#question4").val(),
+                $("#question5").val(),
+                $("#question6").val(),
+                $("#question7").val(),
+                $("#question8").val(),
+                $("#question9").val(),
+                $("#question10").val()
+              ]
+            };
+            var currentURL = window.location.origin;
+            $.post(currentURL + "/api/friends", userData, function(data) {
+              $("#matchName").text(data.name);
+              $("#matchImg").attr("src", data.photo);
+  
+              $("#resultsModal").modal("toggle");
+            });
+          } else {
+            alert("Please fill everything out!");
+          }
+          return false;
+        });
+      </script>
 </body>
 </html>
