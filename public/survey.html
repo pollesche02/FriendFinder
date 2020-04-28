@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friend Finder
+    <title>Friend Finder</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    </title>
+    <script src="https://code.jquery.com/jquery.js" ></script>
+ 
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
@@ -17,7 +19,6 @@
           <h2> The Last First Questions You'll Answer</h2>
 
         <hr>
-          <h3><strong> Lets Find Out About You</strong></h3>
           <h4> Name: </h4>
           <input type= "text" name = "" id= "name" class="form" required/>
           <h4>Photo Link Here</h4>
@@ -26,7 +27,7 @@
         <br>
         <h3><strong>Question 1</strong></h3>
       <h4>Are you will to share your most recent text messages?</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question1">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -37,7 +38,7 @@
       <br>
       <h3><strong>Question 2</strong></h3>
       <h4>I consider myself to be adventerous</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question2">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -48,7 +49,7 @@
       <br>
       <h3><strong>Question 3</strong></h3>
       <h4>Do you think there is life on other planets?</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question3">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -59,7 +60,7 @@
       <br>
       <h3><strong>Question 4</strong></h3>
       <h4>How important is trust in a relationship?</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question4">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -70,7 +71,7 @@
       <br>
       <h3><strong>Question 5</strong></h3>
       <h4>Do you believe everyone deserves a second chance?</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question5">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -81,7 +82,7 @@
       <br>
       <h3><strong>Question 6</strong></h3>
       <h4>Do you believe that a truth that brings a tear is better than a lie that brings a smile.</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question6">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -92,7 +93,7 @@
       <br>
       <h3><strong>Question 7</strong></h3>
       <h4>Money is important to me...  </h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question7">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -103,7 +104,7 @@
       <br>
       <h3><strong>Question 8</strong></h3>
       <h4>I finish what I start ... </h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question8">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -114,7 +115,7 @@
       <br>
       <h3><strong>Question 9</strong></h3>
       <h4>People around other people gives me more energy...</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="question9">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -125,7 +126,7 @@
       <br>
       <h3><strong>Question 10</strong></h3>
       <h4>I can think quick in different situations...</h4>
-      <select data-placeholder="" class="chosen-select" id="q1">
+      <select data-placeholder="" class="chosen-select" id="questio10">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -136,6 +137,7 @@
       <br>
       <br>
       <br>
+      <button id="submit">Submit</button>
 
     <div id="modal" class="modal fade">
         <div class="modal-dialog">
@@ -158,6 +160,7 @@
 
     <script type="text/javascript">
         $("#submit").on("click", function() {
+            event.preventDefault()
           function completedForm() {
             var isValid = true;
             $(".form-control").each(function() {
@@ -168,7 +171,7 @@
             });
             return isValid;
           }
-          if (validateForm() == true) {
+          if (completedForm() == true) {
             var userData = {
               name: $("#name").val(),
               photo: $("#photo").val(),
@@ -185,8 +188,9 @@
                 $("#question10").val()
               ]
             };
-            var currentURL = window.location.origin;
-            $.post(currentURL + "/api/friends", userData, function(data) {
+           // var currentURL = window.location.origin;
+           console.log("userdata: ", userData)
+            $.post("/api/friends", userData, function(data) {
               $("#matchName").text(data.name);
               $("#matchImg").attr("src", data.photo);
   
