@@ -20,14 +20,14 @@ module.exports = function(app) {
  var bestMatch = {
      name: " ",
      photo: " ",
-     friendDifference: 100
+     friendDifference: 1000
  };
 
  var userData = req.body;
  var userName = userData.name;
- var userScore = userData.score;
-
- var b = userScore.map(function(item) {
+ var userScores = userData.scores;
+ console.log (req.body);
+ var b = userScores.map(function(item) {
      return parseInt(item, 10);
  });
 
@@ -47,8 +47,8 @@ module.exports = function(app) {
      console.log("Total Difference " + totalDifference);
       console.log("Best match friend difference " + bestMatch.friendDifference);
 
-      var bfriendScore = friends[i].score.reduce((a, b) => a + b, 0);
-      totalDifference += Math.abs(sum - befriendScore);
+      var bfriendScore = friends[i].scores.reduce((a, b) => a + b, 0);
+      totalDifference += Math.abs(sum - bfriendScore);
       console.log("**********************" + totalDifference);
 
   if (totalDifference <= bestMatch.friendDifference) {
