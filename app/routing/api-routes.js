@@ -41,7 +41,7 @@ module.exports = function(app) {
  var sum = b.reduce((a, b) => a + b, 0);
  console.log("*************************");
 
- for (var i = 0; i < friends.length, i++) {
+ for (var i = 0; i < friends.length; i++) {
      console.log(friends[i].name);
      totalDifference = 0;
      console.log("Total Difference " + totalDifference);
@@ -51,8 +51,20 @@ module.exports = function(app) {
       totalDifference += Math.abs(sum - befriendScore);
       console.log("**********************" + totalDifference);
 
-  if 
+  if (totalDifference <= bestMatch.friendDifference) {
+      bestMatch.name = friends[i].name;
+      bestMatch.photo = friends[i].photo;
+      bestMatch.friendDifference = totalDifference;
+  }
+  console.log(totalDifference + "Total Difference");
  }
+  console.log(bestMatch);
+
+
+  friends.push(userData);
+  console.log("New User Added");
+  console.log(userData);
+  res.json(bestMatch);
  
  
   });
