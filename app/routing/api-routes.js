@@ -18,9 +18,9 @@ module.exports = function(app) {
 // find the best match  / compare the survey with every survey in the friends array
 
  var bestMatch = {
-     name: "",
-     photo: "",
-     friendDifference: 1000
+     name: " ",
+     photo: " ",
+     friendDifference: 100
  };
 
  var userData = req.body;
@@ -47,7 +47,7 @@ module.exports = function(app) {
      console.log("Total Difference " + totalDifference);
       console.log("Best match friend difference " + bestMatch.friendDifference);
 
-      var befriendScore = friends[i].score.reduce((a, b) => a + b, 0);
+      var bfriendScore = friends[i].score.reduce((a, b) => a + b, 0);
       totalDifference += Math.abs(sum - befriendScore);
       console.log("**********************" + totalDifference);
 
