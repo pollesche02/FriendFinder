@@ -13,7 +13,7 @@ app.use(bodyParser.json({type:"application/vnd.api+json"}));
 
 
 // now I need to code my routes for all my html pages
-app.use(express.static("./app/public"));
+app.use(express.static("./app/./public"));
 
 require("./app/routing/api-routes.js")(app);
 require("./app/routing/html-routes.js")(app);

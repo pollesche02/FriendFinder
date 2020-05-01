@@ -191,10 +191,10 @@
            // var currentURL = window.location.origin;
            console.log("userdata: ", userData)
             $.post("/api/friends", userData, function(data) {
-              $("#matchName").text(data.name);
+              $("#nameOfMatch").text(data.name);
               $("#matchImg").attr("src", data.photo);
   
-              $("#resultsModal").modal("toggle");
+              $("#modal").modal();
             });
           } else {
             alert("Please fill everything out!");
