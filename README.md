@@ -1,4 +1,7 @@
 # FriendFinder
+
+If you want to play the game you can simply click here: https://github.com/pollesche02/FriendFinder/settings
+
  
  This is a Match Finder Application. This application will use Node.js and Express Package
 

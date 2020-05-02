@@ -1,5 +1,5 @@
 .jumbotron {
-    background-image: url(/imageslove\ background.jpg);
+    background-image: url(/public/images/lovebackground.jpg);
 }
 
 .logo {
@@ -15,10 +15,8 @@
     border-color: inherit;
     margin: 1em 0;
   }
-  .Mntitle {
-    color: white;
-  }
-  #resultsModal img {
+  
+  #modal {
     overflow: hidden;
     width: 500px;
   }
