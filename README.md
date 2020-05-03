@@ -1,6 +1,6 @@
 # FriendFinder
 
-If you want to play the game you can simply click here: 
+If you want to play the game you can simply click here:  https://ff-friendfinderhomework.herokuapp.com/
 
  
  This is a Match Finder Application. This application will use Node.js and Express Package
@@ -21,4 +21,3 @@ If you want to play the game you can simply click here:
 
  Please feel free to review my LinkedIn page @    https://www.linkedin.com/in/danielle-pollesche-b397332b/
 
- 
