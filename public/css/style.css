@@ -1,5 +1,5 @@
 .jumbotron {
-    background-image: url(/public/images/lovebackground.jpg);
+    background-image: url(/public/images/lovebackground.jpg)
 }
 
 .logo {
@@ -8,9 +8,48 @@
     margin-right: auto;
 }
 
-.body {
-    background: #e4ebf1;
+body {
+  width: 97%;
+  margin: 0px auto; 
+  height: 100%;
+
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
   }
+
+  .btn {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #dc3545;
+    border-color: #6610f2;
+  }
+
+  .space { margin-top: 700px; }
+ 
+  .spaces { margin-top: 50px; }
+
+  .xtraspaces { margin-top: 125px; }
+
+
+    h1, h2 {
+    font-size: 45px;
+    font-family: harrington;
+    font-weight: bold;
+    color:  black;
+  }
+
+  h4 {
+    font-size: 25px;
+    font-family: harrington;
+    color: black;
+    font-weight: bold;
+  }
+
   hr {
     border-color: inherit;
     margin: 1em 0;
